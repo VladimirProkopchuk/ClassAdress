@@ -32,15 +32,15 @@ int main() {
 		 adress* adressList = new adress[number];
 		 string town; string street;
 		 int numberHouse; int numberApartament;
-		// cout << n; 
 		 
 		 for (int i = 0; i < number; i++) {
 			 file >> town >> street >> numberHouse >> numberApartament;
 			 adressList[i] = adress (town,street,numberHouse,numberApartament) ;
 		 }
 		 ofstream outFile("out.txt");
-		 for (int i = 0; i < 3; i++) {
+		 for (int i = 0; i < number; i++) {
 			 outFile << adressList[i].getOutAdress() << endl;
 		 }
 		 return 0;
+		 delete[] adressList;
 	}
