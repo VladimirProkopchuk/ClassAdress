@@ -38,7 +38,7 @@ int main() {
 			 adressList[i] = adress (town,street,numberHouse,numberApartament) ;
 		 }
 		 ofstream outFile("out.txt");
-		 for (int i = 0; i < number; i++) {
+		 for (int i = (number-1); i >=0 ; i--) {
 			 outFile << adressList[i].getOutAdress() << endl;
 		 }
 		 return 0;
